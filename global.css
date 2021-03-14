@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+
+  --background: #52489c;
+  --text: #000;
+  --white: #fff;
+  --blue: #4062bb;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--background);
+}
+
+#container input,
+#container button.add {
+  border: 0;
+
+  height: 5rem;
+
+  border-radius: 1.5rem;
+}
+
+#container input[type="text"] {
+  width: 31rem;
+
+  padding: 0 2rem;
+
+  margin-right: 1rem;
+}
+
+#container button.add {
+  width: 11rem;
+
+  font-size: 1.8rem;
+
+  background: var(--blue);
+
+  color: var(--white);
+
+  transition: opacity 0.2s;
+}
+
+#container button.add:hover {
+  opacity: 0.9;
+}
+
+.todos {
+  margin-top: 3rem;
+
+  background: var(--white);
+
+  border-radius: 2rem;
+
+  padding: 0 2rem;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+
+  max-height: 50rem;
+
+  overflow: scroll;
+}
+
+.todos ul {
+  list-style: none;
+}
+
+.todos ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #ccc;
+
+  padding: 1rem 0;
+}
+
+.todos ul li:last-child {
+  border: 0;
+}
+
+.todos ul li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 1;
+}
+
+.todos ul li div span {
+  font-size: 2rem;
+  font-weight: 300;
+
+  color: var(--text);
+
+  display: flex;
+  align-items: center;
+
+  max-width: 35rem;
+}
+
+.todos ul li div input {
+  margin-right: 2rem;
+
+  cursor: pointer;
+}
+
+.todos ul li button {
+  border: 0;
+
+  background: transparent;
+}
+
+.todos ul li button img {
+  width: 2.4rem;
+}
